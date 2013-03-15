@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="735" Width="770" 
         xmlns:local="clr-namespace:FaceTrackingPractice"
-        Closed="WindowClosed">
+        Loaded="WindowLoaded" Closed="WindowClosed">
     
     <Window.Resources>
         <SolidColorBrush x:Key="MediumGreyBrush" Color="#ff6e6e6e"/>
@@ -30,5 +30,13 @@
                 <local:FaceTrackingViewer x:Name="faceTrackingViewer"/>
             </Grid>
         </Viewbox>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Center" FontSize="16" Margin="0 10 0 10" Foreground="{StaticResource MediumGreyBrush}">
+            Say: "<Span Name="upSpan">Up</Span>", "<Span Name="downSpan">Down</Span>", "<Span Name="leftSpan">Left</Span>" or "<Span Name="rightSpan">Right</Span>"
+        </TextBlock>
+        <StatusBar Grid.Row="3" Height="23" HorizontalAlignment="Stretch" Name="statusBar" VerticalAlignment="Bottom" Background="White" Foreground="{StaticResource MediumGreyBrush}">
+            <StatusBarItem Padding="0">
+                <TextBlock Name="statusBarText"></TextBlock>
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>

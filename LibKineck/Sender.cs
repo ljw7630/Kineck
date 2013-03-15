@@ -39,6 +39,25 @@ namespace LibKineck
 			return false;
 		}
 
+		public void AnalyzeAndSend(string command)
+		{
+			switch (command)
+			{
+				case "UP":
+					VolumeControl.IncreaseVolume();
+					break;
+				case "DOWN":
+					VolumeControl.DecreaseVolume();
+					break;
+				case "LEFT":
+					KeyControl.SendKey(KeyControl.LEFT_ARROW);
+					break;
+				case "RIGHT":
+					KeyControl.SendKey(KeyControl.RIGHT_ARROW);
+					break;
+			}
+		}
+
 		public void AnalyzeAndSend(ref Skeleton skeleon)
 		{
 			HeadRotation rotation = AngleCalculator.GetHeadRotation(ref skeleon);

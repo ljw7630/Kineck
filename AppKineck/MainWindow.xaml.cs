@@ -26,12 +26,13 @@ namespace FaceTrackingPractice
     public partial class MainWindow : Window
     {
         private static readonly int Bgr32BytesPerPixel = (PixelFormats.Bgr32.BitsPerPixel + 7) / 8;
-        private readonly KinectSensorChooser sensorChooser = new KinectSensorChooser();
+        public readonly KinectSensorChooser sensorChooser = new KinectSensorChooser();
         private WriteableBitmap colorImageWritableBitmap;
         private byte[] colorImageData;
         private ColorImageFormat currentColorImageFormat = ColorImageFormat.Undefined;
 
 		private Sender sender;
+	    private SpeechRecognizer _speechRecognizer;
 
 		public Sender Sender
 		{
@@ -42,7 +43,7 @@ namespace FaceTrackingPractice
         public MainWindow()
         {
 			Sender = new Sender();
-
+			
             InitializeComponent();
 
             var faceTrackingViewerBinding = new Binding("Kinect") { Source = sensorChooser };
@@ -105,6 +106,11 @@ namespace FaceTrackingPractice
                 }
             }
         }
+
+		private void WindowLoaded(object sender, RoutedEventArgs routedEventArgs)
+		{
+			_speechRecognizer = new SpeechRecognizer();
+		}
 
         private void WindowClosed(object sender, EventArgs e)
         {

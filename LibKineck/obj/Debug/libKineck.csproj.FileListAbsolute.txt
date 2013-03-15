@@ -2,8 +2,8 @@ C:\Personal\Projects\SystemSoundControl\libKineck\bin\Debug\libKineck.dll
 C:\Personal\Projects\SystemSoundControl\libKineck\bin\Debug\libKineck.pdb
 C:\Personal\Projects\SystemSoundControl\libKineck\obj\Debug\libKineck.dll
 C:\Personal\Projects\SystemSoundControl\libKineck\obj\Debug\libKineck.pdb
-C:\Personal\Projects\Kineck\libKineck\bin\Debug\libKineck.dll
-C:\Personal\Projects\Kineck\libKineck\bin\Debug\libKineck.pdb
-C:\Personal\Projects\Kineck\libKineck\obj\Debug\libKineck.csprojResolveAssemblyReference.cache
-C:\Personal\Projects\Kineck\libKineck\obj\Debug\libKineck.dll
-C:\Personal\Projects\Kineck\libKineck\obj\Debug\libKineck.pdb
+C:\Personal\Projects\Kineck\LibKineck\bin\Debug\LibKineck.dll
+C:\Personal\Projects\Kineck\LibKineck\bin\Debug\LibKineck.pdb
+C:\Personal\Projects\Kineck\LibKineck\obj\Debug\LibKineck.dll
+C:\Personal\Projects\Kineck\LibKineck\obj\Debug\LibKineck.pdb
+C:\Personal\Projects\Kineck\LibKineck\obj\Debug\LibKineck.csprojResolveAssemblyReference.cache
