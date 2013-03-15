@@ -12,25 +12,48 @@ namespace LibKineck
 {
 	public class Sender
 	{
-		public HeadRotation previousHeadState;
+		private HeadRotation _previousHeadState;
+		private static readonly long _delay = 500;
+
+		public HeadRotation PreviousHeadState
+		{
+			get { return _previousHeadState; }
+		}
+
+		private long _elapsedTicks;
 
 		public Sender()
 		{
-			previousHeadState = HeadRotation.NONE;
+			_previousHeadState = HeadRotation.NONE;
+			_elapsedTicks = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+		}
+
+		private bool IsDelayExpired()
+		{
+			long current = DateTime.Now.Ticks/TimeSpan.TicksPerMillisecond;
+			if (current - _elapsedTicks > _delay)
+			{
+				_elapsedTicks = current;
+				return true;
+			}
+			return false;
 		}
 
 		public void AnalyzeAndSend(ref Skeleton skeleon)
 		{
 			HeadRotation rotation = AngleCalculator.GetHeadRotation(ref skeleon);
-			if (previousHeadState != rotation)
+
+			if (IsDelayExpired())
 			{
-				SendCommand(rotation);
+				if (_previousHeadState != rotation)
+				{
+					SendCommand(rotation);
+					_previousHeadState = rotation;
+				}
 			}
-			previousHeadState = rotation;
-			
 		}
 
-		static void SendCommand(HeadRotation rotation)
+		public void SendCommand(HeadRotation rotation)
 		{
 			if (rotation == HeadRotation.LEFT)
 			{

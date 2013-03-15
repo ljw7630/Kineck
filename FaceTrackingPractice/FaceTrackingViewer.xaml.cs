@@ -313,10 +313,13 @@ namespace FaceTrackingPractice
             internal void OnFrameReady(KinectSensor kinectSensor, ColorImageFormat colorImageFormat, byte[] colorImage, DepthImageFormat depthImageFormat, short[] depthImage, Skeleton skeletonOfInterest)
             {
                 this.skeletonTrackingState = skeletonOfInterest.TrackingState;
-                
 
 				// try quaternion
-				// Sender.AnalyzeAndSend(ref skeletonOfInterest);
+				if (App.Current.MainWindow != null)
+				{
+					((MainWindow)App.Current.MainWindow).Sender.AnalyzeAndSend(ref skeletonOfInterest);
+				}
+				
 				// HeadRotation result = AngleCalculator.getHeadRotation(ref skeletonOfInterest);
 				// Console.WriteLine(result);
 

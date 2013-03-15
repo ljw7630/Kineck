@@ -33,8 +33,16 @@ namespace FaceTrackingPractice
 
 		private Sender sender;
 
+		public Sender Sender
+		{
+			get { return this.sender; }
+			set { this.sender = value; }
+		}
+
         public MainWindow()
         {
+			Sender = new Sender();
+
             InitializeComponent();
 
             var faceTrackingViewerBinding = new Binding("Kinect") { Source = sensorChooser };

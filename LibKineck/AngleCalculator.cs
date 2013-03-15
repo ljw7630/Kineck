@@ -51,7 +51,7 @@ namespace LibKineck
 			return 90 - ret;
         }
 
-		private static readonly float threshold = 5f;
+		private static readonly float threshold = 10f;
 
 		public static HeadRotation GetHeadRotation(ref Skeleton skeleton)
 		{
@@ -65,18 +65,18 @@ namespace LibKineck
 				}
 			}
 			float degree = GetYAngleDegreeOfXAxis(head.AbsoluteRotation.Quaternion);
-			Console.WriteLine(degree);
+			// Console.WriteLine(degree);
 			if (degree > threshold)
 			{
 				return HeadRotation.LEFT;
 			}
 			else if (degree < -threshold)
 			{
-				return HeadRotation.RIGHT;
+				return HeadRotation.LEFT;
 			}
 			else
 			{
-				return HeadRotation.NONE;
+				return HeadRotation.RIGHT;
 			}
 		}
     }
