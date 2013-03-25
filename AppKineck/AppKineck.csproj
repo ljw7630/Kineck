@@ -42,7 +42,7 @@
       <HintPath>..\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Kinect.Toolkit.FaceTracking">
-      <HintPath>..\Microsoft.Kinect.Toolkit.FaceTracking\obj\Win32\Debug\Microsoft.Kinect.Toolkit.FaceTracking.dll</HintPath>
+      <HintPath>..\Microsoft.Kinect.Toolkit.FaceTracking\obj\x86\Debug\Microsoft.Kinect.Toolkit.FaceTracking.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Speech, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

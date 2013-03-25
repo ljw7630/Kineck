@@ -22,6 +22,7 @@ namespace FaceTrackingPractice
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
+	/// This class and the corresponding xaml file comes from Microsoft Developer Toolkit 
     /// </summary>
     public partial class MainWindow : Window
     {

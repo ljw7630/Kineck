@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace LibKineck
 {
+	/// <summary>
+	/// Use win32 API to send volume control message to OS
+	/// </summary>
     public class VolumeControl
     {
 		private const int APPCOMMAND_VOLUME_MUTE = 0x80000;

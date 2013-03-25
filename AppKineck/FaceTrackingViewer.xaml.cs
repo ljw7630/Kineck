@@ -23,6 +23,7 @@ namespace FaceTrackingPractice
 {
     /// <summary>
     /// Interaction logic for FaceTrackingViewer.xaml
+	/// This class and the corresponding xaml file comes from Microsoft Developer Toolkit 
     /// </summary>
     public partial class FaceTrackingViewer : UserControl, IDisposable
     {

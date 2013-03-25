@@ -12,6 +12,10 @@ using Microsoft.Speech.Recognition;
 
 namespace FaceTrackingPractice
 {
+	/// <summary>
+	/// This class comes directly from Microsoft Developer Toolkit Samples
+	/// We have no intent to claim this class is our intellectual property
+	/// </summary>
 	class SpeechRecognizer
 	{
 		private const string MediumGreyBrushKey = "MediumGreyBrush";
@@ -110,12 +114,6 @@ namespace FaceTrackingPractice
 		{
 			// Speech utterance confidence below which we treat speech as if it hadn't been heard
 			const double confidenceThreshold = 0.3;
-
-			// Number of degrees in a right angle.
-			const int degreesInRightAngle = 90;
-
-			// Number of pixels turtle should move forwards or backwards each time.
-			const int displacementAmount = 60;
 
 			ClearRecognitionHighlights();
 
