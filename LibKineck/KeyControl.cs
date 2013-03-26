@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace LibKineck
 {
+	/// <summary>
+	/// Sending Key to Operating System directly
+	/// Normally OS will dispatch this key-pressed event to current activate window
+	/// </summary>
 	public class KeyControl
 	{
 		public static string PAGE_UP = "{PGUP}";

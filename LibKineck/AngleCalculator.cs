@@ -8,13 +8,26 @@ using Microsoft.Kinect;
 
 namespace LibKineck
 {
+	/// <summary>
+	/// This class is used for calculating the head swing angle using Quaternion
+	/// </summary>
 	public class AngleCalculator
 	{
+		/// <summary>
+		/// Calcuate the length of the vector
+		/// </summary>
+		/// <param name="vec">A 4-element(X, Y, Z, W) vector</param>
+		/// <returns>a floating point represents the length of the vector</returns>
 		static float GetLength(ref Vector4 vec)
 		{
 			return (float)Math.Sqrt(vec.X * vec.X + vec.Y * vec.Y + vec.Z * vec.Z);
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="quat">A 4-element(X,Y,Z,W) vector about Head-ShoulderCenter</param>
+		/// <returns>A floating point represents the angle the head swing in X-axis (Y-axis is the reference axis)</returns>
         static float GetYAngleDegreeOfXAxis(Vector4 quat)
         {
             float fTx = 2.0f * quat.X;
@@ -51,8 +64,16 @@ namespace LibKineck
 			return 90 - ret;
         }
 
-		private static readonly float threshold = 8f;
+		/// <summary>
+		/// A threshold value to decide when to trigger HeadRotating event
+		/// </summary>
+		private static readonly float threshold = 10f;
 
+		/// <summary>
+		/// Calculate the head rotation by skeleton
+		/// </summary>
+		/// <param name="skeleton">The skeleton of the person</param>
+		/// <returns>Whether this person's head is rotating</returns>
 		public static HeadRotation GetHeadRotation(ref Skeleton skeleton)
 		{
 			BoneOrientation head = null;
@@ -65,7 +86,7 @@ namespace LibKineck
 				}
 			}
 			float degree = GetYAngleDegreeOfXAxis(head.AbsoluteRotation.Quaternion);
-			// Console.WriteLine(degree);
+			
 			if (degree > threshold)
 			{
 				return HeadRotation.RIGHT;

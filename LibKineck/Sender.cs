@@ -10,9 +10,17 @@ using LibKineck;
 
 namespace LibKineck
 {
+	/// <summary>
+	/// A glue between AppKineck and LibKineck
+	/// All message getting from the application (AppKineck) will be analyzed here
+	/// </summary>
 	public class Sender
 	{
 		private HeadRotation _previousHeadState;
+
+		/// <summary>
+		/// We need some delay so that our application will not flood the OS message queue
+		/// </summary>
 		private static readonly long _delay = 500;
 
 		public HeadRotation PreviousHeadState
@@ -39,6 +47,10 @@ namespace LibKineck
 			return false;
 		}
 
+		/// <summary>
+		/// Send command directy
+		/// </summary>
+		/// <param name="command"></param>
 		public void AnalyzeAndSend(string command)
 		{
 			switch (command)
@@ -61,6 +73,10 @@ namespace LibKineck
 			}
 		}
 
+		/// <summary>
+		/// Analyze the skeleton and send command
+		/// </summary>
+		/// <param name="skeleon"></param>
 		public void AnalyzeAndSend(ref Skeleton skeleon)
 		{
 			HeadRotation rotation = AngleCalculator.GetHeadRotation(ref skeleon);

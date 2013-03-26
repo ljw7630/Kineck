@@ -9,9 +9,12 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using Microsoft.Speech.AudioFormat;
 using Microsoft.Speech.Recognition;
-
 namespace AppKineck
 {
+	/// <summary>
+	/// This class comes directly from Microsoft Developer Toolkit Samples
+	/// We have no intent to claim this class is our intellectual property
+	/// </summary>
 	class SpeechRecognizer
 	{
 		private const string MediumGreyBrushKey = "MediumGreyBrush";

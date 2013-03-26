@@ -154,3 +154,8 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+*.cache
+
+LibKineck/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+
+/LibKineck/obj/Debug/*.cache
