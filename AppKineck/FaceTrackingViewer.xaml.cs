@@ -19,7 +19,7 @@ using Microsoft.Kinect.Toolkit.FaceTracking;
 using Point = System.Windows.Point;
 using LibKineck;
 
-namespace FaceTrackingPractice
+namespace AppKineck
 {
     /// <summary>
     /// Interaction logic for FaceTrackingViewer.xaml

@@ -49,6 +49,9 @@ namespace LibKineck
 				case "DOWN":
 					VolumeControl.DecreaseVolume();
 					break;
+				case "MUTE":
+					VolumeControl.MuteVolume();
+					break;
 				case "LEFT":
 					KeyControl.SendKey(KeyControl.LEFT_ARROW);
 					break;

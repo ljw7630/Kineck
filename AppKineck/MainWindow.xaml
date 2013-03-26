@@ -1,8 +1,8 @@
-﻿<Window x:Class="FaceTrackingPractice.MainWindow"
+﻿<Window x:Class="AppKineck.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="735" Width="770" 
-        xmlns:local="clr-namespace:FaceTrackingPractice"
+        xmlns:local="clr-namespace:AppKineck"
         Loaded="WindowLoaded" Closed="WindowClosed">
     
     <Window.Resources>
@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
         <DockPanel Grid.Row="0" Margin="0 0 0 20">
             <Image DockPanel.Dock="Left" Source="Images/Logo.png" Stretch="None" Margin="0 10 0 5"/>
-            <TextBlock DockPanel.Dock="Right" Margin="0 0 -1 0" VerticalAlignment="Bottom" Foreground="{StaticResource MediumGreyBrush}" FontFamily="Segoe UI" FontSize="18">Face Tracking Basics</TextBlock>
+            <TextBlock DockPanel.Dock="Right" Margin="0 0 -1 0" VerticalAlignment="Bottom" Foreground="{StaticResource MediumGreyBrush}" FontFamily="Segoe UI" FontSize="18">Kineck</TextBlock>
             <Image Grid.Column="1" Source="Images/Status.png" Stretch="None" HorizontalAlignment="Center" Margin="0 0 0 5"/>
         </DockPanel>
         <Viewbox Grid.Row="1" Stretch="Uniform" HorizontalAlignment="Center">
@@ -31,7 +31,7 @@
             </Grid>
         </Viewbox>
         <TextBlock Grid.Row="2" HorizontalAlignment="Center" FontSize="16" Margin="0 10 0 10" Foreground="{StaticResource MediumGreyBrush}">
-            Say: "<Span Name="upSpan">Up</Span>", "<Span Name="downSpan">Down</Span>", "<Span Name="leftSpan">Left</Span>" or "<Span Name="rightSpan">Right</Span>"
+            Say: "<Span Name="upSpan">Up</Span>", "<Span Name="downSpan">Down</Span>", "<Span Name="leftSpan">Left</Span>", "<Span Name="rightSpan">Right</Span>" or "<Span Name="muteSpan">Mute</Span>"
         </TextBlock>
         <StatusBar Grid.Row="3" Height="23" HorizontalAlignment="Stretch" Name="statusBar" VerticalAlignment="Bottom" Background="White" Foreground="{StaticResource MediumGreyBrush}">
             <StatusBarItem Padding="0">

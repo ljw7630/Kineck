@@ -18,7 +18,7 @@ using Microsoft.Kinect.Toolkit;
 
 using LibKineck;
 
-namespace FaceTrackingPractice
+namespace AppKineck
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

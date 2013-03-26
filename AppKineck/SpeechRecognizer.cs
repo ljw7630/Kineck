@@ -10,7 +10,7 @@ using System.Windows.Media;
 using Microsoft.Speech.AudioFormat;
 using Microsoft.Speech.Recognition;
 
-namespace FaceTrackingPractice
+namespace AppKineck
 {
 	class SpeechRecognizer
 	{
@@ -111,12 +111,6 @@ namespace FaceTrackingPractice
 			// Speech utterance confidence below which we treat speech as if it hadn't been heard
 			const double confidenceThreshold = 0.3;
 
-			// Number of degrees in a right angle.
-			const int degreesInRightAngle = 90;
-
-			// Number of pixels turtle should move forwards or backwards each time.
-			const int displacementAmount = 60;
-
 			ClearRecognitionHighlights();
 
 			if (e.Result.Confidence >= confidenceThreshold)
@@ -141,6 +135,11 @@ namespace FaceTrackingPractice
 					case "DOWN":
 						window.downSpan.Foreground = Brushes.DeepSkyBlue;
 						window.downSpan.FontWeight = FontWeights.Bold;
+						break;
+
+					case "MUTE":
+						window.muteSpan.Foreground = Brushes.DeepSkyBlue;
+						window.muteSpan.FontWeight = FontWeights.Bold;
 						break;
 				}
 				window.Sender.AnalyzeAndSend(e.Result.Semantics.Value.ToString());

@@ -51,7 +51,7 @@ namespace LibKineck
 			return 90 - ret;
         }
 
-		private static readonly float threshold = 10f;
+		private static readonly float threshold = 8f;
 
 		public static HeadRotation GetHeadRotation(ref Skeleton skeleton)
 		{
@@ -68,7 +68,7 @@ namespace LibKineck
 			// Console.WriteLine(degree);
 			if (degree > threshold)
 			{
-				return HeadRotation.LEFT;
+				return HeadRotation.RIGHT;
 			}
 			else if (degree < -threshold)
 			{
@@ -76,7 +76,7 @@ namespace LibKineck
 			}
 			else
 			{
-				return HeadRotation.RIGHT;
+				return HeadRotation.NONE;
 			}
 		}
     }
