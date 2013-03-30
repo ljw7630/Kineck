@@ -17,13 +17,20 @@ Then run the AppKineck/bin/Release/AppKineck.exe
 Project details:
 
   AppKineck:
+  
     - FaceTrackingViewer.xaml, FaceTrackingViewer.xaml.cs: Directly copied from Sample project: "Face Tracking Basics" in "Kinect for Windows Developer Toolkit v1.6.0". To display user face mesh.
+    
     - MainWindow.xaml, MainWindow.xaml.cs: Originall for from Sample project: "Face Tracking Bascis" and "Speech Basics" in "Kinect for Windows Developer Toolkit v1.6.0". The application window.
 
   LibKinect:
+  
     - AngleCalculator.cs: Calculate head gestures
+    
     - HeadRotation.cs: Enumeration of possible head gestures
+    
     - KeyControl.cs: Simulate key press event and send it to OS
+    
     - VolumeControl.cs: Send Volume control command to OS
+    
     - Sender.cs: use to interact with AppKineck. Get information in AppKineck and call Our library methods.
     
