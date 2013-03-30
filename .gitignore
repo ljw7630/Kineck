@@ -159,3 +159,21 @@ $RECYCLE.BIN/
 LibKineck/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 
 /LibKineck/obj/Debug/*.cache
+
+*.pdb
+
+LibKineck/bin/Debug/libKineck.dll
+
+LibKineck/bin/Debug/libKineck.pdb
+
+LibKineck/bin/Debug/libKineck.pdb
+
+LibKineck/obj/Debug/LibKineck.pdb
+
+LibKineck/obj/Debug/libKineck.csproj.FileListAbsolute.txt
+
+LibKineck/obj/Debug/libKineck.csprojResolveAssemblyReference.cache
+
+LibKineck/obj/Debug/libKineck.dll
+
+LibKineck/obj/Debug/libKineck.dll
